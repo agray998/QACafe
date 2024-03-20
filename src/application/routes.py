@@ -34,7 +34,7 @@ def login():
         return redirect(next or url_for('index'))
     return render_template('login.html', form=form)
 
-@app.route('employee-details', methods=['GET'])
+@app.route('/employee-details', methods=['GET'])
 @login_required
 def get_employees():
     return "WORKING"
